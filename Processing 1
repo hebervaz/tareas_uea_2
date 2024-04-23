@@ -1,0 +1,25 @@
+void setup(){ 
+  size (600, 600); // indica el tamaño del canvas
+}
+
+void draw(){
+  background (220, 240, 150); // indica el color de fondo del canvas
+  
+  fill (255, 200, 200); // modificación del color del relleno del rectángulo
+  stroke (100, 200, 150); // modificación del color del contorno del rectángulo (y de todas las figuras siguientes)
+  rect (250, 50, 100, 250); // creación de un rectángulo o cuadrado (según los puntos colocados)
+  
+  fill (150, 200, 250); // modificación del color del relleno del círculo
+  ellipse (300, 300, 300, 300); // creación de una ellipse o circulo (según los puntos colocados)
+  
+  fill (255, 230, 190); // modificación del color del relleno del triángulo
+  triangle (150, 400, 450, 400, 300, 500); // creaciación de un triángulo
+  
+  line (250, 50, 100, 250); // creación de una línea
+  line (350, 50, 500, 250); // creación de una línea en espejo
+  
+  fill (250, 100, 50); // modificación del color del texto
+   textSize (50); // modificación del tamaño del texto
+  text ("The world behind of you", 50, 550); // texto entre comillas es lo que saldrá en el canvas, seguido de la posición en el mismo
+  
+}
