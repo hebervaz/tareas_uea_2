@@ -1,0 +1,44 @@
+PImage img; //agregar imagen
+ int x;
+ int vx;
+ 
+void setup(){
+  fullScreen(); // para ver pantalla comopleta
+  frameRate(30);
+  img = loadImage("/Users/gerber/Documents/Processing/Ejercicios y tareas/processing_2/Assets/kiosco.jpeg"); //cargar imagen desde ruta
+  img.resize(950, 700); //redimensionar imagen
+  x= 100;
+  vx= 10;
+}
+  
+void draw(){
+  background(126, 90, 180); //color del fondo
+  image(img, 0, 0); // intensidad de la imagen 
+  
+  fill (59, 131, 189); // color de relleno de círculo
+  stroke(59, 131, 189); // color de contorno de círculo
+  ellipse(x, height/2, 350, 350); // creación de círculo
+   x = x + vx;
+   if(x > 1280){
+     vx = -2;
+   }
+
+   if(x < 150){
+     vx = 2;
+   }
+
+   fill(255, 255, 255); // color de texto
+   textAlign(CENTER, CENTER); // alinear texto con centro de círculo
+   textSize(35); // tamaño de círculo
+   text("Sala Con Encanto", x, height/2); //texto que aparecerá y posición
+   
+   textAlign(RIGHT, CENTER); // alineación de texto abajo a la derecha
+   fill(255, 128, 0); // color de texto
+   textSize(25); //tamaño de texto
+   text("Presenta: El resplandor de Lerma", width - 20, height - 120); // texto que aparecerá y posición
+   fill(255, 148, 0); // color de texto
+   text("Por: Heber Vazquez Hernández", width - 20, height -80); // texto que aparecerá y posición
+   fill(255, 168, 0); // color de texto
+   text("Del 10 al 29 de septiembre, 2024", width -20, height - 40); // texto que aparecerá y posición
+   
+}
